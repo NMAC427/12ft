@@ -11,7 +11,7 @@
 		37D2586B28A38F490077B678 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2586A28A38F490077B678 /* ViewController.swift */; };
 		37D2586E28A38F490077B678 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D2586C28A38F490077B678 /* Main.storyboard */; };
 		37D2587028A38F4C0077B678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D2586F28A38F4C0077B678 /* Assets.xcassets */; };
-		37D2587828A38F4C0077B678 /* 12ft.io Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 37D2587728A38F4C0077B678 /* 12ft.io Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		37D2587828A38F4C0077B678 /* 12ft.io Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 37D2587728A38F4C0077B678 /* 12ft.io Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		37D2587D28A38F4C0077B678 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2587C28A38F4C0077B678 /* SafariWebExtensionHandler.swift */; };
 		37D2588028A38F4C0077B678 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 37D2587F28A38F4C0077B678 /* _locales */; };
 		37D2588228A38F4C0077B678 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 37D2588128A38F4C0077B678 /* images */; };
@@ -31,15 +31,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		37D2589628A38F4C0077B678 /* Embed App Extensions */ = {
+		37D2589628A38F4C0077B678 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				37D2587828A38F4C0077B678 /* 12ft.io Extension.appex in Embed App Extensions */,
+				37D2587828A38F4C0077B678 /* 12ft.io Extension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -143,7 +143,7 @@
 				37D2585728A38F490077B678 /* Sources */,
 				37D2585828A38F490077B678 /* Frameworks */,
 				37D2585928A38F490077B678 /* Resources */,
-				37D2589628A38F4C0077B678 /* Embed App Extensions */,
+				37D2589628A38F4C0077B678 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -180,7 +180,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					37D2585A28A38F490077B678 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -306,6 +306,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -366,6 +367,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -391,9 +393,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "twelve ft Extension/twelve_ft_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8P6PQGA3S7;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = F2XKQN9YY8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "twelve ft Extension/Info.plist";
@@ -413,6 +418,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "camenisch.nicolas.twelve-ft.Extension";
 				PRODUCT_MODULE_NAME = twelve_ft_io_extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -424,9 +430,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "twelve ft Extension/twelve_ft_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8P6PQGA3S7;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = F2XKQN9YY8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "twelve ft Extension/Info.plist";
@@ -446,6 +455,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "camenisch.nicolas.twelve-ft.Extension";
 				PRODUCT_MODULE_NAME = twelve_ft_io_extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -460,14 +470,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "twelve ft/twelve ft.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8P6PQGA3S7;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = F2XKQN9YY8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_CFBundleDisplayName = 12ft.io;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -499,14 +513,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "twelve ft/twelve ft.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8P6PQGA3S7;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = F2XKQN9YY8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_CFBundleDisplayName = 12ft.io;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
